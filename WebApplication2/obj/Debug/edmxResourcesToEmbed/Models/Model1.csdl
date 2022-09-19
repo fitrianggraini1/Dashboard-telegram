@@ -1,0 +1,1321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NamlosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Absence_Account">
+    <Key>
+      <PropertyRef Name="client_id" />
+    </Key>
+    <Property Name="client_id" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kpk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Absence_Response">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="superior_kpk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="kpk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="duration" Type="Int32" />
+    <Property Name="reason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="response_time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DY_Improvement">
+    <Key>
+      <PropertyRef Name="impID" />
+    </Key>
+    <Property Name="impID" Type="Int64" Nullable="false" />
+    <Property Name="kpk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fullName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="impDate" Type="DateTime" Precision="3" />
+    <Property Name="impTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impProblemPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impSolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impSolutionPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impValueAddedMeasurement" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="supportingFiles" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pdfFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DY_pdf">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pdfDI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="failed_jobs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="connection" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="queue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="payload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="exception" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="failed_at" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="HAP_Testing_FourWeeks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="part" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="w1" Type="Int32" />
+    <Property Name="w2" Type="Int32" />
+    <Property Name="w3" Type="Int32" />
+    <Property Name="w4" Type="Int32" />
+    <Property Name="w5" Type="Int32" />
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Inventory_Items">
+    <Key>
+      <PropertyRef Name="Item_ID" />
+    </Key>
+    <Property Name="Item_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Item_Spesification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Qty" Type="Int32" />
+  </EntityType>
+  <EntityType Name="KB_Absent">
+    <Key>
+      <PropertyRef Name="absent_id" />
+    </Key>
+    <Property Name="absent_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kpk" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="absent_date" Type="DateTime" Precision="3" />
+    <Property Name="KB_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KB_Issue">
+    <Key>
+      <PropertyRef Name="Issue_Id" />
+    </Key>
+    <Property Name="Issue_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="issue_kb_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kpk" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Issue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Action" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Line" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Scope" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Rplus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dueDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="KB_Main">
+    <Key>
+      <PropertyRef Name="KB_id" />
+    </Key>
+    <Property Name="KB_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KbPlant" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbMeetingPoint" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kbArea" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbLine" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbPpe" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbdatetimeStart" Type="DateTime" Precision="3" />
+    <Property Name="KbdatetimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="KbStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbAbsentStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KF_Background">
+    <Key>
+      <PropertyRef Name="backgroundID" />
+    </Key>
+    <Property Name="backgroundID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="background" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KF_Main" Relationship="Self.FK__KF_Backgr__Kaize__671F4F74" FromRole="KF_Background" ToRole="KF_Main" />
+  </EntityType>
+  <EntityType Name="KF_Baseline">
+    <Key>
+      <PropertyRef Name="baselineID" />
+    </Key>
+    <Property Name="baselineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="baseline" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KF_Main" Relationship="Self.FK__KF_Baseli__Kaize__0D44F85C" FromRole="KF_Baseline" ToRole="KF_Main" />
+  </EntityType>
+  <EntityType Name="KF_Date">
+    <Key>
+      <PropertyRef Name="dateID" />
+    </Key>
+    <Property Name="dateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Kaizen_DateFrom" Type="DateTime" Precision="3" />
+    <Property Name="Kaizen_DateTo" Type="DateTime" Precision="3" />
+    <Property Name="Kaizen_Create" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="KF_Main" Relationship="Self.FK__KF_Date__Kaizen___5F7E2DAC" FromRole="KF_Date" ToRole="KF_Main" />
+  </EntityType>
+  <EntityType Name="KF_Deliverable">
+    <Key>
+      <PropertyRef Name="deliverableID" />
+    </Key>
+    <Property Name="deliverableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="deliverable" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KF_Main" Relationship="Self.FK__KF_Delive__Kaize__6CD828CA" FromRole="KF_Deliverable" ToRole="KF_Main" />
+  </EntityType>
+  <EntityType Name="KF_Finding">
+    <Key>
+      <PropertyRef Name="Finding_ID" />
+    </Key>
+    <Property Name="Finding_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KPI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Issue_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Actions_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Before_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="After_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Unit_measure" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Goals_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Due_date" Type="DateTime" Precision="0" />
+    <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="KF_Finding_Attach">
+    <Key>
+      <PropertyRef Name="AttachID" />
+    </Key>
+    <Property Name="AttachID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FindingID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Before_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="After_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Extention_before_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Extention_after_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KF_Finding_Attach_After">
+    <Key>
+      <PropertyRef Name="AttachAftID" />
+    </Key>
+    <Property Name="AttachAftID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FindingID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="After_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Extention_after_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KF_Finding_Attach_Before">
+    <Key>
+      <PropertyRef Name="AttachBefID" />
+    </Key>
+    <Property Name="AttachBefID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FindingID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Before_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Extention_before_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KF_Goals">
+    <Key>
+      <PropertyRef Name="goalsID" />
+    </Key>
+    <Property Name="goalsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="goals" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KF_Main" Relationship="Self.FK__KF_Goals__Kaizen__10216507" FromRole="KF_Goals" ToRole="KF_Main" />
+  </EntityType>
+  <EntityType Name="KF_Main">
+    <Key>
+      <PropertyRef Name="Kaizen_ID" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kaizen_title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kaizen_type" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kaizen_dept" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kaizen_room" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Kaizen_status" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kaizen_madeby" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="KF_Background" Relationship="Self.FK__KF_Backgr__Kaize__671F4F74" FromRole="KF_Main" ToRole="KF_Background" />
+    <NavigationProperty Name="KF_Baseline" Relationship="Self.FK__KF_Baseli__Kaize__0D44F85C" FromRole="KF_Main" ToRole="KF_Baseline" />
+    <NavigationProperty Name="KF_Date" Relationship="Self.FK__KF_Date__Kaizen___5F7E2DAC" FromRole="KF_Main" ToRole="KF_Date" />
+    <NavigationProperty Name="KF_Deliverable" Relationship="Self.FK__KF_Delive__Kaize__6CD828CA" FromRole="KF_Main" ToRole="KF_Deliverable" />
+    <NavigationProperty Name="KF_Goals" Relationship="Self.FK__KF_Goals__Kaizen__10216507" FromRole="KF_Main" ToRole="KF_Goals" />
+    <NavigationProperty Name="KF_Member" Relationship="Self.FK__KF_Member__Kaize__0880433F" FromRole="KF_Main" ToRole="KF_Member" />
+    <NavigationProperty Name="KF_Scope" Relationship="Self.FK__KF_Scope__Kaizen__69FBBC1F" FromRole="KF_Main" ToRole="KF_Scope" />
+  </EntityType>
+  <EntityType Name="KF_Member">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="member_roles" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KF_Main" Relationship="Self.FK__KF_Member__Kaize__0880433F" FromRole="KF_Member" ToRole="KF_Main" />
+  </EntityType>
+  <EntityType Name="KF_Rplus">
+    <Key>
+      <PropertyRef Name="RID" />
+    </Key>
+    <Property Name="RID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Finding_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="KF_Scope">
+    <Key>
+      <PropertyRef Name="scopeID" />
+    </Key>
+    <Property Name="scopeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="scope" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KF_Main" Relationship="Self.FK__KF_Scope__Kaizen__69FBBC1F" FromRole="KF_Scope" ToRole="KF_Main" />
+  </EntityType>
+  <EntityType Name="KF_Temp">
+    <Key>
+      <PropertyRef Name="Kaizen_ID" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LMS_accounts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="level" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="LMS_Linus">
+    <Key>
+      <PropertyRef Name="linusID" />
+    </Key>
+    <Property Name="linusID" Type="Int32" Nullable="false" />
+    <Property Name="linusOtherID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LinusTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="linusDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="linusStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="linusCreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="LMS_WindUser">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="windUser" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="pass" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="status_log" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="dateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="migration">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="migration1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="batch" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MsForm_1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="kpk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ResEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Datetime" Type="DateTime" Precision="3" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Nest_Toy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nest" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Toy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Peminjam_Terakhir" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Lokasi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="personal_access_tokens">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tokenable_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tokenable_id" Type="Int64" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="token" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="abilities" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="last_used_at" Type="DateTime" Precision="3" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Recruitment_MsForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="e_ktp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ktp_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dom_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <Property Name="gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="no_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_education" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="major" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vac1" Type="DateTime" Precision="0" />
+    <Property Name="vac2" Type="DateTime" Precision="0" />
+    <Property Name="vac3" Type="DateTime" Precision="0" />
+    <Property Name="agreement1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="agreement2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Register_Nest">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KPK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Robins_Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kpk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Robins_Room" Relationship="Self.FK_Robins_Room_Robins_Account" FromRole="Robins_Account" ToRole="Robins_Room" />
+  </EntityType>
+  <EntityType Name="Robins_Booking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="room_id" Type="Int64" />
+    <Property Name="account_id" Type="Int64" />
+    <Property Name="agenda" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="start_date_time" Type="DateTime" Precision="3" />
+    <Property Name="end_date_time" Type="DateTime" Precision="3" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Robins_Integrated_Booking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="room_id" Type="Int64" />
+    <Property Name="creator_kpk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="creator_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="kaizen_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="agenda" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="start_date_time" Type="DateTime" Precision="3" />
+    <Property Name="end_date_time" Type="DateTime" Precision="3" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Robins_Integrated_Group">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="image_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="plant" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="area" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="pic_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="pic_email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Robins_Integrated_Room">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="group_id" Type="Int64" />
+    <Property Name="has_computer" Type="Boolean" />
+    <Property Name="has_projector" Type="Boolean" />
+    <Property Name="has_screen" Type="Boolean" />
+    <Property Name="has_sound_system" Type="Boolean" />
+    <Property Name="has_board" Type="Boolean" />
+    <Property Name="capacity" Type="Int64" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Robins_Room">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="max_capacity" Type="Int64" />
+    <Property Name="plant" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="area" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="pic" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="image_location" Type="String" MaxLength="511" FixedLength="false" Unicode="false" />
+    <Property Name="account_id" Type="Int64" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Robins_Account" Relationship="Self.FK_Robins_Room_Robins_Account" FromRole="Robins_Room" ToRole="Robins_Account" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="temp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="filename" Type="String" MaxLength="511" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Testing">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="shift" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="machineNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="partNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="issues" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email_verified_at" Type="DateTime" Precision="3" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="remember_token" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="HC_Current_Copy">
+    <Key>
+      <PropertyRef Name="EMEMP_" />
+    </Key>
+    <Property Name="EMCMPY" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="EMEMP_" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EMNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="EMDEPT" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="EMLOC_" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="EMJOBA" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="EMBIRT" Type="Decimal" Precision="8" Scale="0" />
+  </EntityType>
+  <EntityType Name="password_resets">
+    <Key>
+      <PropertyRef Name="email" />
+      <PropertyRef Name="token" />
+    </Key>
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="token" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pre_Kaizen_Form">
+    <Key>
+      <PropertyRef Name="fid_id" />
+      <PropertyRef Name="kz_id" />
+    </Key>
+    <Property Name="fid_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kz_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="department" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="sponsor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="facilitator" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="leader" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="co_leader" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="participant" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="scope" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="background" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="baseline" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="goals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="deliverables" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="issue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rootcause" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="action" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Rak_Nest">
+    <Key>
+      <PropertyRef Name="Nest" />
+      <PropertyRef Name="Lokasi" />
+    </Key>
+    <Property Name="Nest" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Lokasi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Toy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Robins_Room_Temp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="max_capacity" Type="Int64" />
+    <Property Name="plant" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="area" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="pic" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="image_location" Type="String" MaxLength="511" FixedLength="false" Unicode="false" />
+    <Property Name="account_id" Type="Int64" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="temp_pre_kz">
+    <Key>
+      <PropertyRef Name="fid_id" />
+      <PropertyRef Name="kz_id" />
+    </Key>
+    <Property Name="fid_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kz_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="department" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="sponsor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="facilitator" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="leader" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="co_leader" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="participant" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="scope" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="background" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="baseline" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="goals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="deliverable" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="issue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rootcause" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="action" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DY_View_DailyImp">
+    <Key>
+      <PropertyRef Name="impID" />
+    </Key>
+    <Property Name="impID" Type="Int64" Nullable="false" />
+    <Property Name="kpk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Plant" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="impDate" Type="DateTime" Precision="3" />
+    <Property Name="impTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impProblemPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impSolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impSolutionPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="impValueAddedMeasurement" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="supportingFiles" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pdfFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KB_View_Absent">
+    <Key>
+      <PropertyRef Name="KB_id" />
+      <PropertyRef Name="absent_id" />
+    </Key>
+    <Property Name="KB_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="absent_id" Type="Int32" Nullable="false" />
+    <Property Name="kpk" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="absent_date" Type="DateTime" Precision="3" />
+    <Property Name="Plant" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="KB_View_Issue">
+    <Key>
+      <PropertyRef Name="KB_id" />
+      <PropertyRef Name="Issue_Id" />
+    </Key>
+    <Property Name="KB_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KbPlant" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbMeetingPoint" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kbArea" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbLine" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbPpe" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kpk" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Issue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Action" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Line" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Scope" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Rplus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+    <Property Name="Issue_Id" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Guid" />
+    <Property Name="dueDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="KB_View_List_1">
+    <Key>
+      <PropertyRef Name="KB_id" />
+    </Key>
+    <Property Name="KB_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KbPlant" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbMeetingPoint" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kbArea" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbLine" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbPpe" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbdatetimeStart" Type="DateTime" Precision="3" />
+    <Property Name="KbdatetimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="KbStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbAbsentStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TotalMember" Type="Int32" />
+  </EntityType>
+  <EntityType Name="KB_View_List_2">
+    <Key>
+      <PropertyRef Name="KB_id" />
+    </Key>
+    <Property Name="KB_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KbPlant" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbMeetingPoint" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kbArea" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbLine" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbPpe" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbdatetimeStart" Type="DateTime" Precision="3" />
+    <Property Name="KbdatetimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="KbStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbAbsentStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TotalIssue" Type="Int32" />
+  </EntityType>
+  <EntityType Name="KB_View_ListMember_All">
+    <Key>
+      <PropertyRef Name="KB_id" />
+      <PropertyRef Name="absent_id" />
+    </Key>
+    <Property Name="KB_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KbPlant" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbMeetingPoint" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kbArea" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbLine" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbPpe" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbdatetimeStart" Type="DateTime" Precision="3" />
+    <Property Name="KbdatetimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="KbStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbAbsentStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="absent_id" Type="Int32" Nullable="false" />
+    <Property Name="kpk" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="absent_date" Type="DateTime" Precision="3" />
+    <Property Name="Plant" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TotalMember" Type="Int32" />
+    <Property Name="TotalIssue" Type="Int32" />
+  </EntityType>
+  <EntityType Name="KB_View_Main_List">
+    <Key>
+      <PropertyRef Name="KB_id" />
+    </Key>
+    <Property Name="KB_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KbPlant" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbMeetingPoint" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kbArea" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbLine" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbPpe" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbdatetimeStart" Type="DateTime" Precision="3" />
+    <Property Name="KbdatetimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="KbStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KbAbsentStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TotalMember" Type="Int32" />
+    <Property Name="TotalIssue" Type="Int32" />
+  </EntityType>
+  <EntityType Name="KF_View_Dashboard">
+    <Key>
+      <PropertyRef Name="Kaizen_ID" />
+      <PropertyRef Name="Kaizen_type" />
+      <PropertyRef Name="Kaizen_title" />
+      <PropertyRef Name="Kaizen_dept" />
+      <PropertyRef Name="Kaizen_status" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kaizen_dept" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_Create" Type="DateTime" Precision="3" />
+    <Property Name="Kaizen_DateFrom" Type="DateTime" Precision="0" />
+    <Property Name="Kaizen_DateTo" Type="DateTime" Precision="0" />
+    <Property Name="Kaizen_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KF_VIEW_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="KPK" />
+    </Key>
+    <Property Name="id" Type="Guid" />
+    <Property Name="Plant" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="KPK" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="DeptCode" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="SectCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="KF_View_Finding">
+    <Key>
+      <PropertyRef Name="Finding_ID" />
+    </Key>
+    <Property Name="Finding_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KPI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Issue_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Actions_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Before_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="After_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Unit_measure" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Goals_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Due_date" Type="DateTime" Precision="0" />
+    <Property Name="Remarks" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Before_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="After_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="KF_View_KaizenAuthor">
+    <Key>
+      <PropertyRef Name="Kaizen_ID" />
+      <PropertyRef Name="Kaizen_title" />
+      <PropertyRef Name="Kaizen_type" />
+      <PropertyRef Name="Kaizen_dept" />
+      <PropertyRef Name="Kaizen_status" />
+      <PropertyRef Name="Kaizen_madeby" />
+      <PropertyRef Name="kpkNum" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="image" />
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_dept" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kaizen_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_madeby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kaizen_DateFrom" Type="DateTime" Precision="0" />
+    <Property Name="Kaizen_DateTo" Type="DateTime" Precision="0" />
+    <Property Name="member_roles" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KF_View_ListKaizen">
+    <Key>
+      <PropertyRef Name="Kaizen_ID" />
+      <PropertyRef Name="Kaizen_title" />
+      <PropertyRef Name="Kaizen_type" />
+      <PropertyRef Name="Kaizen_dept" />
+      <PropertyRef Name="Kaizen_status" />
+      <PropertyRef Name="Kaizen_madeby" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_dept" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kaizen_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_DateFrom" Type="DateTime" Precision="0" />
+    <Property Name="Kaizen_DateTo" Type="DateTime" Precision="0" />
+    <Property Name="Kaizen_madeby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KF_View_ListKaizenAuthor">
+    <Key>
+      <PropertyRef Name="Kaizen_ID" />
+      <PropertyRef Name="Kaizen_title" />
+      <PropertyRef Name="Kaizen_type" />
+      <PropertyRef Name="Kaizen_dept" />
+      <PropertyRef Name="Kaizen_status" />
+      <PropertyRef Name="Kaizen_madeby" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="image" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_dept" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kaizen_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_madeby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_DateFrom" Type="DateTime" Precision="0" />
+    <Property Name="Kaizen_DateTo" Type="DateTime" Precision="0" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kaizen_Create" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="KF_View_ListMemberAll">
+    <Key>
+      <PropertyRef Name="Kaizen_ID" />
+      <PropertyRef Name="Kaizen_title" />
+      <PropertyRef Name="Kaizen_type" />
+      <PropertyRef Name="Kaizen_dept" />
+      <PropertyRef Name="Kaizen_status" />
+      <PropertyRef Name="Kaizen_madeby" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="image" />
+      <PropertyRef Name="pass" />
+      <PropertyRef Name="level" />
+      <PropertyRef Name="id" />
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_dept" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kaizen_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_madeby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_Create" Type="DateTime" Precision="3" />
+    <Property Name="Kaizen_DateTo" Type="DateTime" Precision="0" />
+    <Property Name="Kaizen_DateFrom" Type="DateTime" Precision="0" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="member_roles" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="level" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KF_View_Member_Last_check">
+    <Key>
+      <PropertyRef Name="Kaizen_ID" />
+      <PropertyRef Name="Kaizen_title" />
+      <PropertyRef Name="Kaizen_type" />
+      <PropertyRef Name="Kaizen_dept" />
+      <PropertyRef Name="Kaizen_status" />
+      <PropertyRef Name="Kaizen_madeby" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_dept" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kaizen_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_madeby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="member_roles" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KF_View_MemberName">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="member_roles" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KF_View_RplusName">
+    <Key>
+      <PropertyRef Name="RID" />
+    </Key>
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Finding_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="RID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KF_View_RplusName2">
+    <Key>
+      <PropertyRef Name="Expr1" />
+    </Key>
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Finding_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Expr1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KF_View_UpdateListKaizen">
+    <Key>
+      <PropertyRef Name="Kaizen_title" />
+      <PropertyRef Name="Kaizen_type" />
+      <PropertyRef Name="Kaizen_status" />
+      <PropertyRef Name="Kaizen_dept" />
+      <PropertyRef Name="Kaizen_madeby" />
+    </Key>
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Kaizen_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_DateFrom" Type="DateTime" Precision="0" />
+    <Property Name="Kaizen_DateTo" Type="DateTime" Precision="0" />
+    <Property Name="member_roles" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Kaizen_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_dept" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kaizen_madeby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LMS_employee">
+    <Key>
+      <PropertyRef Name="KPK" />
+    </Key>
+    <Property Name="id" Type="Guid" />
+    <Property Name="Plant" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="KPK" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="DeptCode" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="SectCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LMS_user">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="kpkNum" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="image" />
+      <PropertyRef Name="pass" />
+      <PropertyRef Name="level" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="level" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="LMS_View_WindUser">
+    <Key>
+      <PropertyRef Name="userID" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="windUser" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dept" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="status_log" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="dateTime" Type="DateTime" Precision="3" />
+    <Property Name="tglLahir" Type="Decimal" Precision="8" Scale="0" />
+  </EntityType>
+  <EntityType Name="Robins_View_Booking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="room_id" Type="Int64" />
+    <Property Name="creator_kpk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="creator_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="kaizen_id" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="agenda" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="start_date_time" Type="DateTime" Precision="3" />
+    <Property Name="end_date_time" Type="DateTime" Precision="3" />
+    <Property Name="room_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="room_email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="group_id" Type="Int64" />
+    <Property Name="has_computer" Type="Boolean" />
+    <Property Name="has_projector" Type="Boolean" />
+    <Property Name="has_screen" Type="Boolean" />
+    <Property Name="has_sound_system" Type="Boolean" />
+    <Property Name="has_board" Type="Boolean" />
+    <Property Name="capacity" Type="Int64" />
+    <Property Name="group_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="image_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="plant" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="area" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="pic_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="pic_email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_1">
+    <Key>
+      <PropertyRef Name="Finding_ID" />
+    </Key>
+    <Property Name="Finding_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kaizen_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KPI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Issue_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Actions_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Before_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="After_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Unit_measure" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Goals_act" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Due_date" Type="DateTime" Precision="0" />
+    <Property Name="Remarks" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="kpkNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Before_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="After_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Extention_before_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Extention_after_attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_Absence_Response">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="superior_kpk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="kpk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="duration" Type="Int64" />
+    <Property Name="reason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="response_time" Type="DateTime" Precision="3" />
+    <Property Name="superior_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="superior_client_id" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_HC_Current">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="EMCMPY" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="EMEMP_" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="EMNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="EMDEPT" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="EMLOC_" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="EMJOBA" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="EMBIRT" Type="Decimal" Precision="8" Scale="0" />
+  </EntityType>
+  <Association Name="FK__KF_Backgr__Kaize__671F4F74">
+    <End Role="KF_Main" Type="Self.KF_Main" Multiplicity="0..1" />
+    <End Role="KF_Background" Type="Self.KF_Background" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KF_Main">
+        <PropertyRef Name="Kaizen_ID" />
+      </Principal>
+      <Dependent Role="KF_Background">
+        <PropertyRef Name="Kaizen_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KF_Baseli__Kaize__0D44F85C">
+    <End Role="KF_Main" Type="Self.KF_Main" Multiplicity="0..1" />
+    <End Role="KF_Baseline" Type="Self.KF_Baseline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KF_Main">
+        <PropertyRef Name="Kaizen_ID" />
+      </Principal>
+      <Dependent Role="KF_Baseline">
+        <PropertyRef Name="Kaizen_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KF_Date__Kaizen___5F7E2DAC">
+    <End Role="KF_Main" Type="Self.KF_Main" Multiplicity="0..1" />
+    <End Role="KF_Date" Type="Self.KF_Date" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KF_Main">
+        <PropertyRef Name="Kaizen_ID" />
+      </Principal>
+      <Dependent Role="KF_Date">
+        <PropertyRef Name="Kaizen_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KF_Delive__Kaize__6CD828CA">
+    <End Role="KF_Main" Type="Self.KF_Main" Multiplicity="0..1" />
+    <End Role="KF_Deliverable" Type="Self.KF_Deliverable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KF_Main">
+        <PropertyRef Name="Kaizen_ID" />
+      </Principal>
+      <Dependent Role="KF_Deliverable">
+        <PropertyRef Name="Kaizen_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KF_Goals__Kaizen__10216507">
+    <End Role="KF_Main" Type="Self.KF_Main" Multiplicity="0..1" />
+    <End Role="KF_Goals" Type="Self.KF_Goals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KF_Main">
+        <PropertyRef Name="Kaizen_ID" />
+      </Principal>
+      <Dependent Role="KF_Goals">
+        <PropertyRef Name="Kaizen_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KF_Member__Kaize__0880433F">
+    <End Role="KF_Main" Type="Self.KF_Main" Multiplicity="0..1" />
+    <End Role="KF_Member" Type="Self.KF_Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KF_Main">
+        <PropertyRef Name="Kaizen_ID" />
+      </Principal>
+      <Dependent Role="KF_Member">
+        <PropertyRef Name="Kaizen_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KF_Scope__Kaizen__69FBBC1F">
+    <End Role="KF_Main" Type="Self.KF_Main" Multiplicity="0..1" />
+    <End Role="KF_Scope" Type="Self.KF_Scope" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KF_Main">
+        <PropertyRef Name="Kaizen_ID" />
+      </Principal>
+      <Dependent Role="KF_Scope">
+        <PropertyRef Name="Kaizen_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Robins_Room_Robins_Account">
+    <End Role="Robins_Account" Type="Self.Robins_Account" Multiplicity="0..1" />
+    <End Role="Robins_Room" Type="Self.Robins_Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Robins_Account">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Robins_Room">
+        <PropertyRef Name="account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NamlosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Absence_Account" EntityType="Self.Absence_Account" />
+    <EntitySet Name="Absence_Response" EntityType="Self.Absence_Response" />
+    <EntitySet Name="accounts" EntityType="Self.account" />
+    <EntitySet Name="DY_Improvement" EntityType="Self.DY_Improvement" />
+    <EntitySet Name="DY_pdf" EntityType="Self.DY_pdf" />
+    <EntitySet Name="failed_jobs" EntityType="Self.failed_jobs" />
+    <EntitySet Name="HAP_Testing_FourWeeks" EntityType="Self.HAP_Testing_FourWeeks" />
+    <EntitySet Name="Inventory_Items" EntityType="Self.Inventory_Items" />
+    <EntitySet Name="KB_Absent" EntityType="Self.KB_Absent" />
+    <EntitySet Name="KB_Issue" EntityType="Self.KB_Issue" />
+    <EntitySet Name="KB_Main" EntityType="Self.KB_Main" />
+    <EntitySet Name="KF_Background" EntityType="Self.KF_Background" />
+    <EntitySet Name="KF_Baseline" EntityType="Self.KF_Baseline" />
+    <EntitySet Name="KF_Date" EntityType="Self.KF_Date" />
+    <EntitySet Name="KF_Deliverable" EntityType="Self.KF_Deliverable" />
+    <EntitySet Name="KF_Finding" EntityType="Self.KF_Finding" />
+    <EntitySet Name="KF_Finding_Attach" EntityType="Self.KF_Finding_Attach" />
+    <EntitySet Name="KF_Finding_Attach_After" EntityType="Self.KF_Finding_Attach_After" />
+    <EntitySet Name="KF_Finding_Attach_Before" EntityType="Self.KF_Finding_Attach_Before" />
+    <EntitySet Name="KF_Goals" EntityType="Self.KF_Goals" />
+    <EntitySet Name="KF_Main" EntityType="Self.KF_Main" />
+    <EntitySet Name="KF_Member" EntityType="Self.KF_Member" />
+    <EntitySet Name="KF_Rplus" EntityType="Self.KF_Rplus" />
+    <EntitySet Name="KF_Scope" EntityType="Self.KF_Scope" />
+    <EntitySet Name="KF_Temp" EntityType="Self.KF_Temp" />
+    <EntitySet Name="LMS_accounts" EntityType="Self.LMS_accounts" />
+    <EntitySet Name="LMS_Linus" EntityType="Self.LMS_Linus" />
+    <EntitySet Name="LMS_WindUser" EntityType="Self.LMS_WindUser" />
+    <EntitySet Name="migrations" EntityType="Self.migration" />
+    <EntitySet Name="MsForm_1" EntityType="Self.MsForm_1" />
+    <EntitySet Name="Nest_Toy" EntityType="Self.Nest_Toy" />
+    <EntitySet Name="personal_access_tokens" EntityType="Self.personal_access_tokens" />
+    <EntitySet Name="Recruitment_MsForm" EntityType="Self.Recruitment_MsForm" />
+    <EntitySet Name="Register_Nest" EntityType="Self.Register_Nest" />
+    <EntitySet Name="Robins_Account" EntityType="Self.Robins_Account" />
+    <EntitySet Name="Robins_Booking" EntityType="Self.Robins_Booking" />
+    <EntitySet Name="Robins_Integrated_Booking" EntityType="Self.Robins_Integrated_Booking" />
+    <EntitySet Name="Robins_Integrated_Group" EntityType="Self.Robins_Integrated_Group" />
+    <EntitySet Name="Robins_Integrated_Room" EntityType="Self.Robins_Integrated_Room" />
+    <EntitySet Name="Robins_Room" EntityType="Self.Robins_Room" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="temps" EntityType="Self.temp" />
+    <EntitySet Name="Testings" EntityType="Self.Testing" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="HC_Current_Copy" EntityType="Self.HC_Current_Copy" />
+    <EntitySet Name="password_resets" EntityType="Self.password_resets" />
+    <EntitySet Name="Pre_Kaizen_Form" EntityType="Self.Pre_Kaizen_Form" />
+    <EntitySet Name="Rak_Nest" EntityType="Self.Rak_Nest" />
+    <EntitySet Name="Robins_Room_Temp" EntityType="Self.Robins_Room_Temp" />
+    <EntitySet Name="temp_pre_kz" EntityType="Self.temp_pre_kz" />
+    <EntitySet Name="DY_View_DailyImp" EntityType="Self.DY_View_DailyImp" />
+    <EntitySet Name="KB_View_Absent" EntityType="Self.KB_View_Absent" />
+    <EntitySet Name="KB_View_Issue" EntityType="Self.KB_View_Issue" />
+    <EntitySet Name="KB_View_List_1" EntityType="Self.KB_View_List_1" />
+    <EntitySet Name="KB_View_List_2" EntityType="Self.KB_View_List_2" />
+    <EntitySet Name="KB_View_ListMember_All" EntityType="Self.KB_View_ListMember_All" />
+    <EntitySet Name="KB_View_Main_List" EntityType="Self.KB_View_Main_List" />
+    <EntitySet Name="KF_View_Dashboard" EntityType="Self.KF_View_Dashboard" />
+    <EntitySet Name="KF_VIEW_EMPLOYEE" EntityType="Self.KF_VIEW_EMPLOYEE" />
+    <EntitySet Name="KF_View_Finding" EntityType="Self.KF_View_Finding" />
+    <EntitySet Name="KF_View_KaizenAuthor" EntityType="Self.KF_View_KaizenAuthor" />
+    <EntitySet Name="KF_View_ListKaizen" EntityType="Self.KF_View_ListKaizen" />
+    <EntitySet Name="KF_View_ListKaizenAuthor" EntityType="Self.KF_View_ListKaizenAuthor" />
+    <EntitySet Name="KF_View_ListMemberAll" EntityType="Self.KF_View_ListMemberAll" />
+    <EntitySet Name="KF_View_Member_Last_check" EntityType="Self.KF_View_Member_Last_check" />
+    <EntitySet Name="KF_View_MemberName" EntityType="Self.KF_View_MemberName" />
+    <EntitySet Name="KF_View_RplusName" EntityType="Self.KF_View_RplusName" />
+    <EntitySet Name="KF_View_RplusName2" EntityType="Self.KF_View_RplusName2" />
+    <EntitySet Name="KF_View_UpdateListKaizen" EntityType="Self.KF_View_UpdateListKaizen" />
+    <EntitySet Name="LMS_employee" EntityType="Self.LMS_employee" />
+    <EntitySet Name="LMS_user" EntityType="Self.LMS_user" />
+    <EntitySet Name="LMS_View_WindUser" EntityType="Self.LMS_View_WindUser" />
+    <EntitySet Name="Robins_View_Booking" EntityType="Self.Robins_View_Booking" />
+    <EntitySet Name="View_1" EntityType="Self.View_1" />
+    <EntitySet Name="View_Absence_Response" EntityType="Self.View_Absence_Response" />
+    <EntitySet Name="View_HC_Current" EntityType="Self.View_HC_Current" />
+    <AssociationSet Name="FK__KF_Backgr__Kaize__671F4F74" Association="Self.FK__KF_Backgr__Kaize__671F4F74">
+      <End Role="KF_Main" EntitySet="KF_Main" />
+      <End Role="KF_Background" EntitySet="KF_Background" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KF_Baseli__Kaize__0D44F85C" Association="Self.FK__KF_Baseli__Kaize__0D44F85C">
+      <End Role="KF_Main" EntitySet="KF_Main" />
+      <End Role="KF_Baseline" EntitySet="KF_Baseline" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KF_Date__Kaizen___5F7E2DAC" Association="Self.FK__KF_Date__Kaizen___5F7E2DAC">
+      <End Role="KF_Main" EntitySet="KF_Main" />
+      <End Role="KF_Date" EntitySet="KF_Date" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KF_Delive__Kaize__6CD828CA" Association="Self.FK__KF_Delive__Kaize__6CD828CA">
+      <End Role="KF_Main" EntitySet="KF_Main" />
+      <End Role="KF_Deliverable" EntitySet="KF_Deliverable" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KF_Goals__Kaizen__10216507" Association="Self.FK__KF_Goals__Kaizen__10216507">
+      <End Role="KF_Main" EntitySet="KF_Main" />
+      <End Role="KF_Goals" EntitySet="KF_Goals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KF_Member__Kaize__0880433F" Association="Self.FK__KF_Member__Kaize__0880433F">
+      <End Role="KF_Main" EntitySet="KF_Main" />
+      <End Role="KF_Member" EntitySet="KF_Member" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KF_Scope__Kaizen__69FBBC1F" Association="Self.FK__KF_Scope__Kaizen__69FBBC1F">
+      <End Role="KF_Main" EntitySet="KF_Main" />
+      <End Role="KF_Scope" EntitySet="KF_Scope" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Robins_Room_Robins_Account" Association="Self.FK_Robins_Room_Robins_Account">
+      <End Role="Robins_Account" EntitySet="Robins_Account" />
+      <End Role="Robins_Room" EntitySet="Robins_Room" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

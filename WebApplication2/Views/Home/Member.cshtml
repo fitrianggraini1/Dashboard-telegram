@@ -1,0 +1,46 @@
+﻿@model WebApplication2.Models.NestModel
+<!-- cards -->
+<div class="cardBox">
+    <div class="card">
+        <div>
+            <div class="numbers">@ViewBag.Tmember</div>
+            <div class="cardName">Jumlah Member</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="accessibility"></ion-icon>
+        </div>
+    </div>
+</div>
+
+
+<!-- detail list -->
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Data Member</h2>
+        </div>
+        <table id="mytable" class="table table-hover table-borderless">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>KPK</th>
+                    <th>ID</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                @foreach (var Memberajadeh in Model.bot_register_Nests)
+                {
+                <tr>
+                    <td>@Memberajadeh.No</td>
+                    <td>@Memberajadeh.Nama</td>
+                    <td>@Memberajadeh.KPK</td>
+                    <td>@Memberajadeh.ID</td>
+                    <td>@Memberajadeh.Username</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

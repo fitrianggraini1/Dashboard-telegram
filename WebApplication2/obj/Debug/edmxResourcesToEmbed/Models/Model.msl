@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NamlosModel1StoreContainer" CdmEntityContainer="NamlosEntities1">
+    <EntitySetMapping Name="Absence_Account">
+      <EntityTypeMapping TypeName="NamlosModel1.Absence_Account">
+        <MappingFragment StoreEntitySet="Absence_Account">
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Absence_Response">
+      <EntityTypeMapping TypeName="NamlosModel1.Absence_Response">
+        <MappingFragment StoreEntitySet="Absence_Response">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="superior_kpk" ColumnName="superior_kpk" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="response_time" ColumnName="response_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="accounts">
+      <EntityTypeMapping TypeName="NamlosModel1.account">
+        <MappingFragment StoreEntitySet="accounts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DY_Improvement">
+      <EntityTypeMapping TypeName="NamlosModel1.DY_Improvement">
+        <MappingFragment StoreEntitySet="DY_Improvement">
+          <ScalarProperty Name="impID" ColumnName="impID" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="impDate" ColumnName="impDate" />
+          <ScalarProperty Name="impTitle" ColumnName="impTitle" />
+          <ScalarProperty Name="impProblem" ColumnName="impProblem" />
+          <ScalarProperty Name="impProblemPhoto" ColumnName="impProblemPhoto" />
+          <ScalarProperty Name="impSolution" ColumnName="impSolution" />
+          <ScalarProperty Name="impSolutionPhoto" ColumnName="impSolutionPhoto" />
+          <ScalarProperty Name="impValue" ColumnName="impValue" />
+          <ScalarProperty Name="impValueAddedMeasurement" ColumnName="impValueAddedMeasurement" />
+          <ScalarProperty Name="supportingFiles" ColumnName="supportingFiles" />
+          <ScalarProperty Name="pdfFile" ColumnName="pdfFile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DY_pdf">
+      <EntityTypeMapping TypeName="NamlosModel1.DY_pdf">
+        <MappingFragment StoreEntitySet="DY_pdf">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="pdfDI" ColumnName="pdfDI" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="failed_jobs">
+      <EntityTypeMapping TypeName="NamlosModel1.failed_jobs">
+        <MappingFragment StoreEntitySet="failed_jobs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="connection" ColumnName="connection" />
+          <ScalarProperty Name="queue" ColumnName="queue" />
+          <ScalarProperty Name="payload" ColumnName="payload" />
+          <ScalarProperty Name="exception" ColumnName="exception" />
+          <ScalarProperty Name="failed_at" ColumnName="failed_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HAP_Testing_FourWeeks">
+      <EntityTypeMapping TypeName="NamlosModel1.HAP_Testing_FourWeeks">
+        <MappingFragment StoreEntitySet="HAP_Testing_FourWeeks">
+          <ScalarProperty Name="part" ColumnName="part" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="w1" ColumnName="w1" />
+          <ScalarProperty Name="w2" ColumnName="w2" />
+          <ScalarProperty Name="w3" ColumnName="w3" />
+          <ScalarProperty Name="w4" ColumnName="w4" />
+          <ScalarProperty Name="w5" ColumnName="w5" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventory_Items">
+      <EntityTypeMapping TypeName="NamlosModel1.Inventory_Items">
+        <MappingFragment StoreEntitySet="Inventory_Items">
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="Item_Spesification" ColumnName="Item_Spesification" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+          <ScalarProperty Name="Item_Qty" ColumnName="Item_Qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_Absent">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_Absent">
+        <MappingFragment StoreEntitySet="KB_Absent">
+          <ScalarProperty Name="Absent_Plant" ColumnName="Absent_Plant" />
+          <ScalarProperty Name="absent_id" ColumnName="absent_id" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="absent_date" ColumnName="absent_date" />
+          <ScalarProperty Name="KB_id" ColumnName="KB_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_Issue">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_Issue">
+        <MappingFragment StoreEntitySet="KB_Issue">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="KB_Area" ColumnName="KB_Area" />
+          <ScalarProperty Name="KB_Plant" ColumnName="KB_Plant" />
+          <ScalarProperty Name="Issue_Id" ColumnName="Issue_Id" />
+          <ScalarProperty Name="issue_kb_id" ColumnName="issue_kb_id" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="Issue" ColumnName="Issue" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Line" ColumnName="Line" />
+          <ScalarProperty Name="Scope" ColumnName="Scope" />
+          <ScalarProperty Name="Rplus" ColumnName="Rplus" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="dueDate" ColumnName="dueDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_Main">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_Main">
+        <MappingFragment StoreEntitySet="KB_Main">
+          <ScalarProperty Name="KB_id" ColumnName="KB_id" />
+          <ScalarProperty Name="KbPlant" ColumnName="KbPlant" />
+          <ScalarProperty Name="KbMeetingPoint" ColumnName="KbMeetingPoint" />
+          <ScalarProperty Name="kbArea" ColumnName="kbArea" />
+          <ScalarProperty Name="KbLine" ColumnName="KbLine" />
+          <ScalarProperty Name="KbPpe" ColumnName="KbPpe" />
+          <ScalarProperty Name="KbdatetimeStart" ColumnName="KbdatetimeStart" />
+          <ScalarProperty Name="KbdatetimeEnd" ColumnName="KbdatetimeEnd" />
+          <ScalarProperty Name="KbStatus" ColumnName="KbStatus" />
+          <ScalarProperty Name="KbAbsentStatus" ColumnName="KbAbsentStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Background">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Background">
+        <MappingFragment StoreEntitySet="KF_Background">
+          <ScalarProperty Name="backgroundID" ColumnName="backgroundID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="background" ColumnName="background" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Baseline">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Baseline">
+        <MappingFragment StoreEntitySet="KF_Baseline">
+          <ScalarProperty Name="baselineID" ColumnName="baselineID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="baseline" ColumnName="baseline" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Date">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Date">
+        <MappingFragment StoreEntitySet="KF_Date">
+          <ScalarProperty Name="dateID" ColumnName="dateID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="Kaizen_DateFrom" ColumnName="Kaizen_DateFrom" />
+          <ScalarProperty Name="Kaizen_DateTo" ColumnName="Kaizen_DateTo" />
+          <ScalarProperty Name="Kaizen_Create" ColumnName="Kaizen_Create" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Deliverable">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Deliverable">
+        <MappingFragment StoreEntitySet="KF_Deliverable">
+          <ScalarProperty Name="deliverableID" ColumnName="deliverableID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="deliverable" ColumnName="deliverable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Finding">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Finding">
+        <MappingFragment StoreEntitySet="KF_Finding">
+          <ScalarProperty Name="Finding_ID" ColumnName="Finding_ID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="KPI" ColumnName="KPI" />
+          <ScalarProperty Name="Issue_desc" ColumnName="Issue_desc" />
+          <ScalarProperty Name="Actions_desc" ColumnName="Actions_desc" />
+          <ScalarProperty Name="Before_act" ColumnName="Before_act" />
+          <ScalarProperty Name="After_act" ColumnName="After_act" />
+          <ScalarProperty Name="Unit_measure" ColumnName="Unit_measure" />
+          <ScalarProperty Name="Goals_act" ColumnName="Goals_act" />
+          <ScalarProperty Name="Due_date" ColumnName="Due_date" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Finding_Attach">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Finding_Attach">
+        <MappingFragment StoreEntitySet="KF_Finding_Attach">
+          <ScalarProperty Name="AttachID" ColumnName="AttachID" />
+          <ScalarProperty Name="FindingID" ColumnName="FindingID" />
+          <ScalarProperty Name="Before_attach" ColumnName="Before_attach" />
+          <ScalarProperty Name="After_attach" ColumnName="After_attach" />
+          <ScalarProperty Name="Extention_before_attach" ColumnName="Extention_before_attach" />
+          <ScalarProperty Name="Extention_after_attach" ColumnName="Extention_after_attach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Finding_Attach_After">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Finding_Attach_After">
+        <MappingFragment StoreEntitySet="KF_Finding_Attach_After">
+          <ScalarProperty Name="AttachAftID" ColumnName="AttachAftID" />
+          <ScalarProperty Name="FindingID" ColumnName="FindingID" />
+          <ScalarProperty Name="After_attach" ColumnName="After_attach" />
+          <ScalarProperty Name="Extention_after_attach" ColumnName="Extention_after_attach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Finding_Attach_Before">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Finding_Attach_Before">
+        <MappingFragment StoreEntitySet="KF_Finding_Attach_Before">
+          <ScalarProperty Name="AttachBefID" ColumnName="AttachBefID" />
+          <ScalarProperty Name="FindingID" ColumnName="FindingID" />
+          <ScalarProperty Name="Before_attach" ColumnName="Before_attach" />
+          <ScalarProperty Name="Extention_before_attach" ColumnName="Extention_before_attach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Goals">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Goals">
+        <MappingFragment StoreEntitySet="KF_Goals">
+          <ScalarProperty Name="goalsID" ColumnName="goalsID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="goals" ColumnName="goals" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Main">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Main">
+        <MappingFragment StoreEntitySet="KF_Main">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="Kaizen_title" ColumnName="Kaizen_title" />
+          <ScalarProperty Name="Kaizen_type" ColumnName="Kaizen_type" />
+          <ScalarProperty Name="Kaizen_dept" ColumnName="Kaizen_dept" />
+          <ScalarProperty Name="Kaizen_room" ColumnName="Kaizen_room" />
+          <ScalarProperty Name="Kaizen_status" ColumnName="Kaizen_status" />
+          <ScalarProperty Name="Kaizen_madeby" ColumnName="Kaizen_madeby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Member">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Member">
+        <MappingFragment StoreEntitySet="KF_Member">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="member_roles" ColumnName="member_roles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Rplus">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Rplus">
+        <MappingFragment StoreEntitySet="KF_Rplus">
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="Finding_ID" ColumnName="Finding_ID" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Scope">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Scope">
+        <MappingFragment StoreEntitySet="KF_Scope">
+          <ScalarProperty Name="scopeID" ColumnName="scopeID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="scope" ColumnName="scope" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_Temp">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_Temp">
+        <MappingFragment StoreEntitySet="KF_Temp">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_accounts">
+      <EntityTypeMapping TypeName="NamlosModel1.LMS_accounts">
+        <MappingFragment StoreEntitySet="LMS_accounts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_Linus">
+      <EntityTypeMapping TypeName="NamlosModel1.LMS_Linus">
+        <MappingFragment StoreEntitySet="LMS_Linus">
+          <ScalarProperty Name="linusRoom" ColumnName="linusRoom" />
+          <ScalarProperty Name="linusFullname" ColumnName="linusFullname" />
+          <ScalarProperty Name="linusKpk" ColumnName="linusKpk" />
+          <ScalarProperty Name="linusDateTo_meeting" ColumnName="linusDateTo_meeting" />
+          <ScalarProperty Name="linusDateFrom_meeting" ColumnName="linusDateFrom_meeting" />
+          <ScalarProperty Name="linusFoto2" ColumnName="linusFoto2" />
+          <ScalarProperty Name="linusFoto1" ColumnName="linusFoto1" />
+          <ScalarProperty Name="linusRemaks" ColumnName="linusRemaks" />
+          <ScalarProperty Name="linusTitle" ColumnName="linusTitle" />
+          <ScalarProperty Name="linusID" ColumnName="linusID" />
+          <ScalarProperty Name="linusOtherID" ColumnName="linusOtherID" />
+          <ScalarProperty Name="linusStatus" ColumnName="linusStatus" />
+          <ScalarProperty Name="linusCreateDate" ColumnName="linusCreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_WindUser">
+      <EntityTypeMapping TypeName="NamlosModel1.LMS_WindUser">
+        <MappingFragment StoreEntitySet="LMS_WindUser">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="windUser" ColumnName="windUser" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="status_log" ColumnName="status_log" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migrations">
+      <EntityTypeMapping TypeName="NamlosModel1.migration">
+        <MappingFragment StoreEntitySet="migrations">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="migration1" ColumnName="migration" />
+          <ScalarProperty Name="batch" ColumnName="batch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MsForm_1">
+      <EntityTypeMapping TypeName="NamlosModel1.MsForm_1">
+        <MappingFragment StoreEntitySet="MsForm_1">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="ResEmail" ColumnName="ResEmail" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personal_access_tokens">
+      <EntityTypeMapping TypeName="NamlosModel1.personal_access_tokens">
+        <MappingFragment StoreEntitySet="personal_access_tokens">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tokenable_type" ColumnName="tokenable_type" />
+          <ScalarProperty Name="tokenable_id" ColumnName="tokenable_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="abilities" ColumnName="abilities" />
+          <ScalarProperty Name="last_used_at" ColumnName="last_used_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recruitment_MsForm">
+      <EntityTypeMapping TypeName="NamlosModel1.Recruitment_MsForm">
+        <MappingFragment StoreEntitySet="Recruitment_MsForm">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="e_ktp" ColumnName="e_ktp" />
+          <ScalarProperty Name="ktp_city" ColumnName="ktp_city" />
+          <ScalarProperty Name="dom_city" ColumnName="dom_city" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="no_phone" ColumnName="no_phone" />
+          <ScalarProperty Name="last_education" ColumnName="last_education" />
+          <ScalarProperty Name="major" ColumnName="major" />
+          <ScalarProperty Name="vac1" ColumnName="vac1" />
+          <ScalarProperty Name="vac2" ColumnName="vac2" />
+          <ScalarProperty Name="vac3" ColumnName="vac3" />
+          <ScalarProperty Name="agreement1" ColumnName="agreement1" />
+          <ScalarProperty Name="agreement2" ColumnName="agreement2" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Robins_Account">
+      <EntityTypeMapping TypeName="NamlosModel1.Robins_Account">
+        <MappingFragment StoreEntitySet="Robins_Account">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Robins_Booking">
+      <EntityTypeMapping TypeName="NamlosModel1.Robins_Booking">
+        <MappingFragment StoreEntitySet="Robins_Booking">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="room_id" ColumnName="room_id" />
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+          <ScalarProperty Name="agenda" ColumnName="agenda" />
+          <ScalarProperty Name="start_date_time" ColumnName="start_date_time" />
+          <ScalarProperty Name="end_date_time" ColumnName="end_date_time" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Robins_Integrated_Booking">
+      <EntityTypeMapping TypeName="NamlosModel1.Robins_Integrated_Booking">
+        <MappingFragment StoreEntitySet="Robins_Integrated_Booking">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="room_id" ColumnName="room_id" />
+          <ScalarProperty Name="creator_kpk" ColumnName="creator_kpk" />
+          <ScalarProperty Name="creator_name" ColumnName="creator_name" />
+          <ScalarProperty Name="kaizen_id" ColumnName="kaizen_id" />
+          <ScalarProperty Name="agenda" ColumnName="agenda" />
+          <ScalarProperty Name="start_date_time" ColumnName="start_date_time" />
+          <ScalarProperty Name="end_date_time" ColumnName="end_date_time" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Robins_Integrated_Group">
+      <EntityTypeMapping TypeName="NamlosModel1.Robins_Integrated_Group">
+        <MappingFragment StoreEntitySet="Robins_Integrated_Group">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="image_name" ColumnName="image_name" />
+          <ScalarProperty Name="plant" ColumnName="plant" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="pic_name" ColumnName="pic_name" />
+          <ScalarProperty Name="pic_email" ColumnName="pic_email" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Robins_Integrated_Room">
+      <EntityTypeMapping TypeName="NamlosModel1.Robins_Integrated_Room">
+        <MappingFragment StoreEntitySet="Robins_Integrated_Room">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="has_computer" ColumnName="has_computer" />
+          <ScalarProperty Name="has_projector" ColumnName="has_projector" />
+          <ScalarProperty Name="has_screen" ColumnName="has_screen" />
+          <ScalarProperty Name="has_sound_system" ColumnName="has_sound_system" />
+          <ScalarProperty Name="has_board" ColumnName="has_board" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Robins_Room">
+      <EntityTypeMapping TypeName="NamlosModel1.Robins_Room">
+        <MappingFragment StoreEntitySet="Robins_Room">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="max_capacity" ColumnName="max_capacity" />
+          <ScalarProperty Name="plant" ColumnName="plant" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="pic" ColumnName="pic" />
+          <ScalarProperty Name="image_location" ColumnName="image_location" />
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="NamlosModel1.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temps">
+      <EntityTypeMapping TypeName="NamlosModel1.temp">
+        <MappingFragment StoreEntitySet="temp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Testings">
+      <EntityTypeMapping TypeName="NamlosModel1.Testing">
+        <MappingFragment StoreEntitySet="Testing">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+          <ScalarProperty Name="machineNumber" ColumnName="machineNumber" />
+          <ScalarProperty Name="partNumber" ColumnName="partNumber" />
+          <ScalarProperty Name="issues" ColumnName="issues" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="NamlosModel1.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="email_verified_at" ColumnName="email_verified_at" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="remember_token" ColumnName="remember_token" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HC_Current_Copy">
+      <EntityTypeMapping TypeName="NamlosModel1.HC_Current_Copy">
+        <MappingFragment StoreEntitySet="HC_Current_Copy">
+          <ScalarProperty Name="EMCMPY" ColumnName="EMCMPY" />
+          <ScalarProperty Name="EMEMP_" ColumnName="EMEMP#" />
+          <ScalarProperty Name="EMNAME" ColumnName="EMNAME" />
+          <ScalarProperty Name="EMDEPT" ColumnName="EMDEPT" />
+          <ScalarProperty Name="EMLOC_" ColumnName="EMLOC#" />
+          <ScalarProperty Name="EMJOBA" ColumnName="EMJOBA" />
+          <ScalarProperty Name="EMBIRT" ColumnName="EMBIRT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="password_resets">
+      <EntityTypeMapping TypeName="NamlosModel1.password_resets">
+        <MappingFragment StoreEntitySet="password_resets">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pre_Kaizen_Form">
+      <EntityTypeMapping TypeName="NamlosModel1.Pre_Kaizen_Form">
+        <MappingFragment StoreEntitySet="Pre_Kaizen_Form">
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="fid_id" ColumnName="fid_id" />
+          <ScalarProperty Name="kz_id" ColumnName="kz_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="sponsor" ColumnName="sponsor" />
+          <ScalarProperty Name="facilitator" ColumnName="facilitator" />
+          <ScalarProperty Name="leader" ColumnName="leader" />
+          <ScalarProperty Name="co_leader" ColumnName="co_leader" />
+          <ScalarProperty Name="participant" ColumnName="participant" />
+          <ScalarProperty Name="scope" ColumnName="scope" />
+          <ScalarProperty Name="background" ColumnName="background" />
+          <ScalarProperty Name="baseline" ColumnName="baseline" />
+          <ScalarProperty Name="goals" ColumnName="goals" />
+          <ScalarProperty Name="deliverables" ColumnName="deliverables" />
+          <ScalarProperty Name="issue" ColumnName="issue" />
+          <ScalarProperty Name="rootcause" ColumnName="rootcause" />
+          <ScalarProperty Name="action" ColumnName="action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Robins_Room_Temp">
+      <EntityTypeMapping TypeName="NamlosModel1.Robins_Room_Temp">
+        <MappingFragment StoreEntitySet="Robins_Room_Temp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="max_capacity" ColumnName="max_capacity" />
+          <ScalarProperty Name="plant" ColumnName="plant" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="pic" ColumnName="pic" />
+          <ScalarProperty Name="image_location" ColumnName="image_location" />
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temp_pre_kz">
+      <EntityTypeMapping TypeName="NamlosModel1.temp_pre_kz">
+        <MappingFragment StoreEntitySet="temp_pre_kz">
+          <ScalarProperty Name="fid_id" ColumnName="fid_id" />
+          <ScalarProperty Name="kz_id" ColumnName="kz_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="sponsor" ColumnName="sponsor" />
+          <ScalarProperty Name="facilitator" ColumnName="facilitator" />
+          <ScalarProperty Name="leader" ColumnName="leader" />
+          <ScalarProperty Name="co_leader" ColumnName="co_leader" />
+          <ScalarProperty Name="participant" ColumnName="participant" />
+          <ScalarProperty Name="scope" ColumnName="scope" />
+          <ScalarProperty Name="background" ColumnName="background" />
+          <ScalarProperty Name="baseline" ColumnName="baseline" />
+          <ScalarProperty Name="goals" ColumnName="goals" />
+          <ScalarProperty Name="deliverable" ColumnName="deliverable" />
+          <ScalarProperty Name="issue" ColumnName="issue" />
+          <ScalarProperty Name="rootcause" ColumnName="rootcause" />
+          <ScalarProperty Name="action" ColumnName="action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DY_View_DailyImp">
+      <EntityTypeMapping TypeName="NamlosModel1.DY_View_DailyImp">
+        <MappingFragment StoreEntitySet="DY_View_DailyImp">
+          <ScalarProperty Name="impID" ColumnName="impID" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="impDate" ColumnName="impDate" />
+          <ScalarProperty Name="impTitle" ColumnName="impTitle" />
+          <ScalarProperty Name="impProblem" ColumnName="impProblem" />
+          <ScalarProperty Name="impProblemPhoto" ColumnName="impProblemPhoto" />
+          <ScalarProperty Name="impSolution" ColumnName="impSolution" />
+          <ScalarProperty Name="impSolutionPhoto" ColumnName="impSolutionPhoto" />
+          <ScalarProperty Name="impValue" ColumnName="impValue" />
+          <ScalarProperty Name="impValueAddedMeasurement" ColumnName="impValueAddedMeasurement" />
+          <ScalarProperty Name="supportingFiles" ColumnName="supportingFiles" />
+          <ScalarProperty Name="pdfFile" ColumnName="pdfFile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_View_Absent">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_View_Absent">
+        <MappingFragment StoreEntitySet="KB_View_Absent">
+          <ScalarProperty Name="KB_id" ColumnName="KB_id" />
+          <ScalarProperty Name="absent_id" ColumnName="absent_id" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="absent_date" ColumnName="absent_date" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_View_Issue">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_View_Issue">
+        <MappingFragment StoreEntitySet="KB_View_Issue">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="KB_id" ColumnName="KB_id" />
+          <ScalarProperty Name="KbPlant" ColumnName="KbPlant" />
+          <ScalarProperty Name="KbMeetingPoint" ColumnName="KbMeetingPoint" />
+          <ScalarProperty Name="kbArea" ColumnName="kbArea" />
+          <ScalarProperty Name="KbLine" ColumnName="KbLine" />
+          <ScalarProperty Name="KbPpe" ColumnName="KbPpe" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="Issue" ColumnName="Issue" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Line" ColumnName="Line" />
+          <ScalarProperty Name="Scope" ColumnName="Scope" />
+          <ScalarProperty Name="Rplus" ColumnName="Rplus" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Issue_Id" ColumnName="Issue_Id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dueDate" ColumnName="dueDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_View_List_1">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_View_List_1">
+        <MappingFragment StoreEntitySet="KB_View_List_1">
+          <ScalarProperty Name="KB_id" ColumnName="KB_id" />
+          <ScalarProperty Name="KbPlant" ColumnName="KbPlant" />
+          <ScalarProperty Name="KbMeetingPoint" ColumnName="KbMeetingPoint" />
+          <ScalarProperty Name="kbArea" ColumnName="kbArea" />
+          <ScalarProperty Name="KbLine" ColumnName="KbLine" />
+          <ScalarProperty Name="KbPpe" ColumnName="KbPpe" />
+          <ScalarProperty Name="KbdatetimeStart" ColumnName="KbdatetimeStart" />
+          <ScalarProperty Name="KbdatetimeEnd" ColumnName="KbdatetimeEnd" />
+          <ScalarProperty Name="KbStatus" ColumnName="KbStatus" />
+          <ScalarProperty Name="KbAbsentStatus" ColumnName="KbAbsentStatus" />
+          <ScalarProperty Name="TotalMember" ColumnName="TotalMember" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_View_List_2">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_View_List_2">
+        <MappingFragment StoreEntitySet="KB_View_List_2">
+          <ScalarProperty Name="KB_id" ColumnName="KB_id" />
+          <ScalarProperty Name="KbPlant" ColumnName="KbPlant" />
+          <ScalarProperty Name="KbMeetingPoint" ColumnName="KbMeetingPoint" />
+          <ScalarProperty Name="kbArea" ColumnName="kbArea" />
+          <ScalarProperty Name="KbLine" ColumnName="KbLine" />
+          <ScalarProperty Name="KbPpe" ColumnName="KbPpe" />
+          <ScalarProperty Name="KbdatetimeStart" ColumnName="KbdatetimeStart" />
+          <ScalarProperty Name="KbdatetimeEnd" ColumnName="KbdatetimeEnd" />
+          <ScalarProperty Name="KbStatus" ColumnName="KbStatus" />
+          <ScalarProperty Name="KbAbsentStatus" ColumnName="KbAbsentStatus" />
+          <ScalarProperty Name="TotalIssue" ColumnName="TotalIssue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_View_ListMember_All">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_View_ListMember_All">
+        <MappingFragment StoreEntitySet="KB_View_ListMember_All">
+          <ScalarProperty Name="KB_id" ColumnName="KB_id" />
+          <ScalarProperty Name="KbPlant" ColumnName="KbPlant" />
+          <ScalarProperty Name="KbMeetingPoint" ColumnName="KbMeetingPoint" />
+          <ScalarProperty Name="kbArea" ColumnName="kbArea" />
+          <ScalarProperty Name="KbLine" ColumnName="KbLine" />
+          <ScalarProperty Name="KbPpe" ColumnName="KbPpe" />
+          <ScalarProperty Name="KbdatetimeStart" ColumnName="KbdatetimeStart" />
+          <ScalarProperty Name="KbdatetimeEnd" ColumnName="KbdatetimeEnd" />
+          <ScalarProperty Name="KbStatus" ColumnName="KbStatus" />
+          <ScalarProperty Name="KbAbsentStatus" ColumnName="KbAbsentStatus" />
+          <ScalarProperty Name="absent_id" ColumnName="absent_id" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="absent_date" ColumnName="absent_date" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="TotalMember" ColumnName="TotalMember" />
+          <ScalarProperty Name="TotalIssue" ColumnName="TotalIssue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KB_View_Main_List">
+      <EntityTypeMapping TypeName="NamlosModel1.KB_View_Main_List">
+        <MappingFragment StoreEntitySet="KB_View_Main_List">
+          <ScalarProperty Name="KB_id" ColumnName="KB_id" />
+          <ScalarProperty Name="KbPlant" ColumnName="KbPlant" />
+          <ScalarProperty Name="KbMeetingPoint" ColumnName="KbMeetingPoint" />
+          <ScalarProperty Name="kbArea" ColumnName="kbArea" />
+          <ScalarProperty Name="KbLine" ColumnName="KbLine" />
+          <ScalarProperty Name="KbPpe" ColumnName="KbPpe" />
+          <ScalarProperty Name="KbdatetimeStart" ColumnName="KbdatetimeStart" />
+          <ScalarProperty Name="KbdatetimeEnd" ColumnName="KbdatetimeEnd" />
+          <ScalarProperty Name="KbStatus" ColumnName="KbStatus" />
+          <ScalarProperty Name="KbAbsentStatus" ColumnName="KbAbsentStatus" />
+          <ScalarProperty Name="TotalMember" ColumnName="TotalMember" />
+          <ScalarProperty Name="TotalIssue" ColumnName="TotalIssue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_Dashboard">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_Dashboard">
+        <MappingFragment StoreEntitySet="KF_View_Dashboard">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="Kaizen_type" ColumnName="Kaizen_type" />
+          <ScalarProperty Name="Kaizen_title" ColumnName="Kaizen_title" />
+          <ScalarProperty Name="Kaizen_room" ColumnName="Kaizen_room" />
+          <ScalarProperty Name="Kaizen_dept" ColumnName="Kaizen_dept" />
+          <ScalarProperty Name="Kaizen_Create" ColumnName="Kaizen_Create" />
+          <ScalarProperty Name="Kaizen_DateFrom" ColumnName="Kaizen_DateFrom" />
+          <ScalarProperty Name="Kaizen_DateTo" ColumnName="Kaizen_DateTo" />
+          <ScalarProperty Name="Kaizen_status" ColumnName="Kaizen_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_VIEW_EMPLOYEE">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_VIEW_EMPLOYEE">
+        <MappingFragment StoreEntitySet="KF_VIEW_EMPLOYEE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="KPK" ColumnName="KPK" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="SectCode" ColumnName="SectCode" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_Finding">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_Finding">
+        <MappingFragment StoreEntitySet="KF_View_Finding">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Finding_ID" ColumnName="Finding_ID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="KPI" ColumnName="KPI" />
+          <ScalarProperty Name="Issue_desc" ColumnName="Issue_desc" />
+          <ScalarProperty Name="Actions_desc" ColumnName="Actions_desc" />
+          <ScalarProperty Name="Before_act" ColumnName="Before_act" />
+          <ScalarProperty Name="After_act" ColumnName="After_act" />
+          <ScalarProperty Name="Unit_measure" ColumnName="Unit_measure" />
+          <ScalarProperty Name="Goals_act" ColumnName="Goals_act" />
+          <ScalarProperty Name="Due_date" ColumnName="Due_date" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_KaizenAuthor">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_KaizenAuthor">
+        <MappingFragment StoreEntitySet="KF_View_KaizenAuthor">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="Kaizen_title" ColumnName="Kaizen_title" />
+          <ScalarProperty Name="Kaizen_type" ColumnName="Kaizen_type" />
+          <ScalarProperty Name="Kaizen_dept" ColumnName="Kaizen_dept" />
+          <ScalarProperty Name="Kaizen_room" ColumnName="Kaizen_room" />
+          <ScalarProperty Name="Kaizen_status" ColumnName="Kaizen_status" />
+          <ScalarProperty Name="Kaizen_madeby" ColumnName="Kaizen_madeby" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Kaizen_DateFrom" ColumnName="Kaizen_DateFrom" />
+          <ScalarProperty Name="Kaizen_DateTo" ColumnName="Kaizen_DateTo" />
+          <ScalarProperty Name="member_roles" ColumnName="member_roles" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_ListKaizen">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_ListKaizen">
+        <MappingFragment StoreEntitySet="KF_View_ListKaizen">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="Kaizen_title" ColumnName="Kaizen_title" />
+          <ScalarProperty Name="Kaizen_type" ColumnName="Kaizen_type" />
+          <ScalarProperty Name="Kaizen_dept" ColumnName="Kaizen_dept" />
+          <ScalarProperty Name="Kaizen_room" ColumnName="Kaizen_room" />
+          <ScalarProperty Name="Kaizen_status" ColumnName="Kaizen_status" />
+          <ScalarProperty Name="Kaizen_DateFrom" ColumnName="Kaizen_DateFrom" />
+          <ScalarProperty Name="Kaizen_DateTo" ColumnName="Kaizen_DateTo" />
+          <ScalarProperty Name="Kaizen_madeby" ColumnName="Kaizen_madeby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_ListKaizenAuthor">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_ListKaizenAuthor">
+        <MappingFragment StoreEntitySet="KF_View_ListKaizenAuthor">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="Kaizen_title" ColumnName="Kaizen_title" />
+          <ScalarProperty Name="Kaizen_type" ColumnName="Kaizen_type" />
+          <ScalarProperty Name="Kaizen_dept" ColumnName="Kaizen_dept" />
+          <ScalarProperty Name="Kaizen_room" ColumnName="Kaizen_room" />
+          <ScalarProperty Name="Kaizen_status" ColumnName="Kaizen_status" />
+          <ScalarProperty Name="Kaizen_madeby" ColumnName="Kaizen_madeby" />
+          <ScalarProperty Name="Kaizen_DateFrom" ColumnName="Kaizen_DateFrom" />
+          <ScalarProperty Name="Kaizen_DateTo" ColumnName="Kaizen_DateTo" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Kaizen_Create" ColumnName="Kaizen_Create" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_ListMemberAll">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_ListMemberAll">
+        <MappingFragment StoreEntitySet="KF_View_ListMemberAll">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="Kaizen_title" ColumnName="Kaizen_title" />
+          <ScalarProperty Name="Kaizen_type" ColumnName="Kaizen_type" />
+          <ScalarProperty Name="Kaizen_dept" ColumnName="Kaizen_dept" />
+          <ScalarProperty Name="Kaizen_room" ColumnName="Kaizen_room" />
+          <ScalarProperty Name="Kaizen_status" ColumnName="Kaizen_status" />
+          <ScalarProperty Name="Kaizen_madeby" ColumnName="Kaizen_madeby" />
+          <ScalarProperty Name="Kaizen_Create" ColumnName="Kaizen_Create" />
+          <ScalarProperty Name="Kaizen_DateTo" ColumnName="Kaizen_DateTo" />
+          <ScalarProperty Name="Kaizen_DateFrom" ColumnName="Kaizen_DateFrom" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="member_roles" ColumnName="member_roles" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_Member_Last_check">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_Member_Last_check">
+        <MappingFragment StoreEntitySet="KF_View_Member_Last_check">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="Kaizen_title" ColumnName="Kaizen_title" />
+          <ScalarProperty Name="Kaizen_type" ColumnName="Kaizen_type" />
+          <ScalarProperty Name="Kaizen_dept" ColumnName="Kaizen_dept" />
+          <ScalarProperty Name="Kaizen_room" ColumnName="Kaizen_room" />
+          <ScalarProperty Name="Kaizen_status" ColumnName="Kaizen_status" />
+          <ScalarProperty Name="Kaizen_madeby" ColumnName="Kaizen_madeby" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="member_roles" ColumnName="member_roles" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_MemberName">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_MemberName">
+        <MappingFragment StoreEntitySet="KF_View_MemberName">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="member_roles" ColumnName="member_roles" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_RplusName">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_RplusName">
+        <MappingFragment StoreEntitySet="KF_View_RplusName">
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Finding_ID" ColumnName="Finding_ID" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_RplusName2">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_RplusName2">
+        <MappingFragment StoreEntitySet="KF_View_RplusName2">
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="Finding_ID" ColumnName="Finding_ID" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KF_View_UpdateListKaizen">
+      <EntityTypeMapping TypeName="NamlosModel1.KF_View_UpdateListKaizen">
+        <MappingFragment StoreEntitySet="KF_View_UpdateListKaizen">
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Kaizen_title" ColumnName="Kaizen_title" />
+          <ScalarProperty Name="Kaizen_type" ColumnName="Kaizen_type" />
+          <ScalarProperty Name="Kaizen_DateFrom" ColumnName="Kaizen_DateFrom" />
+          <ScalarProperty Name="Kaizen_DateTo" ColumnName="Kaizen_DateTo" />
+          <ScalarProperty Name="member_roles" ColumnName="member_roles" />
+          <ScalarProperty Name="Kaizen_status" ColumnName="Kaizen_status" />
+          <ScalarProperty Name="Kaizen_dept" ColumnName="Kaizen_dept" />
+          <ScalarProperty Name="Kaizen_room" ColumnName="Kaizen_room" />
+          <ScalarProperty Name="Kaizen_madeby" ColumnName="Kaizen_madeby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_employee">
+      <EntityTypeMapping TypeName="NamlosModel1.LMS_employee">
+        <MappingFragment StoreEntitySet="LMS_employee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="KPK" ColumnName="KPK" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="SectCode" ColumnName="SectCode" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_user">
+      <EntityTypeMapping TypeName="NamlosModel1.LMS_user">
+        <MappingFragment StoreEntitySet="LMS_user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_View_WindUser">
+      <EntityTypeMapping TypeName="NamlosModel1.LMS_View_WindUser">
+        <MappingFragment StoreEntitySet="LMS_View_WindUser">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="windUser" ColumnName="windUser" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="status_log" ColumnName="status_log" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+          <ScalarProperty Name="tglLahir" ColumnName="tglLahir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Robins_View_Booking">
+      <EntityTypeMapping TypeName="NamlosModel1.Robins_View_Booking">
+        <MappingFragment StoreEntitySet="Robins_View_Booking">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="room_id" ColumnName="room_id" />
+          <ScalarProperty Name="creator_kpk" ColumnName="creator_kpk" />
+          <ScalarProperty Name="creator_name" ColumnName="creator_name" />
+          <ScalarProperty Name="kaizen_id" ColumnName="kaizen_id" />
+          <ScalarProperty Name="agenda" ColumnName="agenda" />
+          <ScalarProperty Name="start_date_time" ColumnName="start_date_time" />
+          <ScalarProperty Name="end_date_time" ColumnName="end_date_time" />
+          <ScalarProperty Name="room_name" ColumnName="room_name" />
+          <ScalarProperty Name="room_email" ColumnName="room_email" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="has_computer" ColumnName="has_computer" />
+          <ScalarProperty Name="has_projector" ColumnName="has_projector" />
+          <ScalarProperty Name="has_screen" ColumnName="has_screen" />
+          <ScalarProperty Name="has_sound_system" ColumnName="has_sound_system" />
+          <ScalarProperty Name="has_board" ColumnName="has_board" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="group_name" ColumnName="group_name" />
+          <ScalarProperty Name="image_name" ColumnName="image_name" />
+          <ScalarProperty Name="plant" ColumnName="plant" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="pic_name" ColumnName="pic_name" />
+          <ScalarProperty Name="pic_email" ColumnName="pic_email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_1">
+      <EntityTypeMapping TypeName="NamlosModel1.View_1">
+        <MappingFragment StoreEntitySet="View_1">
+          <ScalarProperty Name="Finding_ID" ColumnName="Finding_ID" />
+          <ScalarProperty Name="Kaizen_ID" ColumnName="Kaizen_ID" />
+          <ScalarProperty Name="KPI" ColumnName="KPI" />
+          <ScalarProperty Name="Issue_desc" ColumnName="Issue_desc" />
+          <ScalarProperty Name="Actions_desc" ColumnName="Actions_desc" />
+          <ScalarProperty Name="Before_act" ColumnName="Before_act" />
+          <ScalarProperty Name="After_act" ColumnName="After_act" />
+          <ScalarProperty Name="Unit_measure" ColumnName="Unit_measure" />
+          <ScalarProperty Name="Goals_act" ColumnName="Goals_act" />
+          <ScalarProperty Name="Due_date" ColumnName="Due_date" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="kpkNum" ColumnName="kpkNum" />
+          <ScalarProperty Name="Before_attach" ColumnName="Before_attach" />
+          <ScalarProperty Name="After_attach" ColumnName="After_attach" />
+          <ScalarProperty Name="Extention_before_attach" ColumnName="Extention_before_attach" />
+          <ScalarProperty Name="Extention_after_attach" ColumnName="Extention_after_attach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Absence_Response">
+      <EntityTypeMapping TypeName="NamlosModel1.View_Absence_Response">
+        <MappingFragment StoreEntitySet="View_Absence_Response">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="superior_kpk" ColumnName="superior_kpk" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="kpk" ColumnName="kpk" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="response_time" ColumnName="response_time" />
+          <ScalarProperty Name="superior_name" ColumnName="superior_name" />
+          <ScalarProperty Name="superior_client_id" ColumnName="superior_client_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_HC_Current">
+      <EntityTypeMapping TypeName="NamlosModel1.View_HC_Current">
+        <MappingFragment StoreEntitySet="View_HC_Current">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="EMCMPY" ColumnName="EMCMPY" />
+          <ScalarProperty Name="EMEMP_" ColumnName="EMEMP#" />
+          <ScalarProperty Name="EMNAME" ColumnName="EMNAME" />
+          <ScalarProperty Name="EMDEPT" ColumnName="EMDEPT" />
+          <ScalarProperty Name="EMLOC_" ColumnName="EMLOC#" />
+          <ScalarProperty Name="EMJOBA" ColumnName="EMJOBA" />
+          <ScalarProperty Name="EMBIRT" ColumnName="EMBIRT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="NamlosModel1.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="NamlosModel1.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="NamlosModel1.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="NamlosModel1.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NamlosModel1.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="NamlosModel1.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NamlosModel1.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="NamlosModel1.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="NamlosModel1.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="BOT_Lokator_Nest">
+      <EntityTypeMapping TypeName="NamlosModel1.BOT_Lokator_Nest">
+        <MappingFragment StoreEntitySet="BOT_Lokator_Nest">
+          <ScalarProperty Name="Lokator" ColumnName="Lokator" />
+          <ScalarProperty Name="No" ColumnName="No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOT_Register_Nest">
+      <EntityTypeMapping TypeName="NamlosModel1.BOT_Register_Nest">
+        <MappingFragment StoreEntitySet="BOT_Register_Nest">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KPK" ColumnName="KPK" />
+          <ScalarProperty Name="Nama" ColumnName="Nama" />
+          <ScalarProperty Name="No" ColumnName="No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOT_Toy_Nest">
+      <EntityTypeMapping TypeName="NamlosModel1.BOT_Toy_Nest">
+        <MappingFragment StoreEntitySet="BOT_Toy_Nest">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Lokasi" ColumnName="Lokasi" />
+          <ScalarProperty Name="Peminjam_Terakhir" ColumnName="Peminjam_Terakhir" />
+          <ScalarProperty Name="Toy" ColumnName="Toy" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Nest" ColumnName="Nest" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOT_Rak_Nest">
+      <EntityTypeMapping TypeName="NamlosModel1.BOT_Rak_Nest">
+        <MappingFragment StoreEntitySet="BOT_Rak_Nest">
+          <ScalarProperty Name="Toy" ColumnName="Toy" />
+          <ScalarProperty Name="Lokasi" ColumnName="Lokasi" />
+          <ScalarProperty Name="Nest" ColumnName="Nest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

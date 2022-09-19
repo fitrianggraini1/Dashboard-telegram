@@ -1,0 +1,93 @@
+﻿@model WebApplication2.Models.NestModel
+
+<div class="cardBox">
+    <div class="card">
+        <div>
+            <div class="numbers">@ViewBag.Tnest</div>
+            <div class="cardName">Jumlah Nest</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="logo-web-component"></ion-icon>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <div class="numbers">@ViewBag.Tlokator</div>
+            <div class="cardName">Jumlah Lokator</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="logo-stackoverflow"></ion-icon>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <div class="numbers">@ViewBag.NestU</div>
+            <div class="cardName">Nest Terpakai</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="logo-steam"></ion-icon>
+        </div>
+    </div>
+</div>
+
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Data Nest</h2>
+        </div>
+        <table id="mytable" class="table table-hover table-borderless">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nest</th>
+                    <th>Type</th>
+                    <th>Toy</th>
+                    <th>Peminjam_Terakhir</th>
+                    <th>Lokasi</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                @foreach (var nestajadeh in Model.bOT_Toy_Nests)
+
+                {
+                <tr>
+                    <td>@nestajadeh.Id</td>
+                    <td>@nestajadeh.Nest</td>
+                    <td>@nestajadeh.Type</td>
+                    <td>@nestajadeh.Toy</td>
+                    <td>@nestajadeh.Peminjam_Terakhir</td>
+                    <td>@nestajadeh.Lokasi</td>
+                    <td>@nestajadeh.Status</td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Data Lokator</h2>
+        </div>
+        <table id="mytable" class="table table-hover table-borderless">
+            <thead>
+                <tr>
+                    <th>Nest</th>
+                    <th>Lokasi</th>
+                    <th>Toy</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                @foreach (var rakajadeh in Model.bot_rak_Toys)
+
+                {
+                <tr>
+                    <td>@rakajadeh.Nest</td>
+                    <td>@rakajadeh.Lokasi</td>
+                    <td>@rakajadeh.Toy</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
